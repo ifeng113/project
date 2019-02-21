@@ -1,0 +1,29 @@
+server:
+  port: 9527
+spring:
+  rabbitmq:
+#    host: 192.168.60.29
+#    port: 5672
+#    username: adas
+#    password: Wz2345@$%.
+    host: 10.50.100.53
+    port: 5672
+    username: admin
+    password: admin
+spark:
+  # java 执行shell与python不同,java需要去除-it 否则报错 docker the input device is not a TTY
+#  docker_exec:  docker exec a1
+  docker_exec:  docker exec f2c84f0e74d6
+  docker_program_path: /mnt/spark.py
+  host_data_path: /mnt/spark/data/
+  host_result_path: /mnt/spark/result/
+#  host_data_path: G:/
+  docker_data_path: /mnt/data/
+  docker_result_path: /mnt/result/
+#  callback: 10.50.40.122:${server.port}/spark
+  callback: 10.50.40.113:${server.port}/spark
+  eps: 500
+  mps: 3
+
+logging:
+  file: db_scan.log
