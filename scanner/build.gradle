@@ -16,7 +16,7 @@ apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
-group = 'com.vcolco.dodo'
+group = 'com.eairlv.scanner'
 version = '0.3.2'
 sourceCompatibility = 1.8
 
